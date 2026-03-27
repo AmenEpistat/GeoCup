@@ -1,0 +1,9 @@
+pandas
+geopandas
+shapely
+numpy
+libpysal
+esda
+matplotlib
+networkx
+catboost
