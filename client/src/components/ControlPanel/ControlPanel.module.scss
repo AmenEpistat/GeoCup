@@ -1,0 +1,220 @@
+.control-panel {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 260px;
+  background: rgba(8, 8, 24, 0.90);
+  border-radius: 14px;
+  padding: 20px;
+  color: white;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media (max-width: 768px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    height: 100vh;
+    border-radius: 0 20px 20px 0;
+    transform: translateX(-100%);
+    z-index: 1000;
+
+    &.control-panel--open {
+      transform: translateX(0);
+    }
+  }
+}
+
+.menuBtn {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 44px;
+    height: 44px;
+    background: rgba(8, 8, 24, 0.9);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    backdrop-filter: blur(10px);
+
+    &.hidden { opacity: 0; pointer-events: none; }
+  }
+}
+
+.control-panel__header {
+  display: flex;
+  align-items: center;
+}
+
+.control-panel__close {
+  display: none !important;
+  background: none;
+  border: none;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block !important;
+    margin-left: auto;
+  }
+}
+
+.control-panel__logo {
+  font-weight: 600;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  letter-spacing: 0.05em;
+}
+
+.control-panel__section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.control-panel__label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: $additional-color;
+  margin: 0;
+}
+
+.control-panel__toggle {
+  display: flex;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.control-panel__toggle-btn {
+  flex: 1;
+  background: $accent-color;
+  font-weight: 700;
+  border-radius: 14px;
+  border: none;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 9px;
+
+  &:hover {
+    color: $secondary-color !important;
+    background: $accent-color-hover !important;
+    border: none !important;
+  }
+
+  &--active {
+    background: $primary-color;
+    color: white;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.8) !important;
+      background: $primary-color-hover !important;
+    }
+  }
+}
+
+.control-panel__legend-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: $additional-color;
+  margin-bottom: 8px;
+}
+
+.control-panel__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.control-panel__layer-btn {
+  background: none;
+  border: none;
+  border-radius: 12px;
+  color: $additional-color;
+  font-size: 12px;
+  padding: 16px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 2px 8px;
+
+  &:hover {
+    color: $additional-color-hover !important;
+    background: none  !important;
+    border: none !important;
+  }
+
+  &--active {
+    background: $primary-color;
+    color: white;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.8) !important;
+      background: $primary-color-hover !important;
+    }
+  }
+}
+
+:global(.ant-slider-track) {
+  background-color: $primary-color !important;
+}
+
+:global(.ant-slider-handle) {
+  transition: background-color 0.5s ease-in-out !important;
+  &:hover{
+    &::after {
+      background-color: $primary-color-hover !important;
+    }
+  }
+  &::after {
+    box-shadow: none !important;
+    width: 32px !important;
+    height: 32px !important;
+    inset-block-start: -10px !important;
+    inset-inline-start: -12px !important;
+  }
+
+  &:hover {
+    background-color: $primary-color-hover !important;
+  }
+}
+
+:global(.ant-slider-rail) {
+  background-color: $additional-color !important;
+}
+
+.control-panel__range {
+  float: right;
+  font-size: 12px;
+  display: flex;
+  color: $primary-color;
+  font-weight: 700;
+}
+
+.control-panel__range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: $additional-color;
+}
