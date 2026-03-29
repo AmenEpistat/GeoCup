@@ -1,0 +1,49 @@
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^6.1.1",
+    "@deck.gl/core": "9.0.33",
+    "@deck.gl/extensions": "^9.0.33",
+    "@deck.gl/geo-layers": "9.0.33",
+    "@deck.gl/layers": "9.0.33",
+    "@deck.gl/react": "9.0.33",
+    "@loaders.gl/core": "^3.4.14",
+    "@loaders.gl/mvt": "^3.4.14",
+    "antd": "^6.3.4",
+    "deck.gl": "9.0.33",
+    "flatgeobuf": "3.33.0",
+    "maplibre-gl": "4.7.1",
+    "mobx": "6.13.5",
+    "mobx-react-lite": "4.0.7",
+    "pmtiles": "3.2.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-map-gl": "7.1.7",
+    "react-router-dom": "6.26.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@typescript-eslint/eslint-plugin": "^8.57.2",
+    "@typescript-eslint/parser": "^8.57.2",
+    "@vitejs/plugin-react": "4.3.4",
+    "eslint": "^9.39.4",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-react": "^7.37.5",
+    "prettier": "^3.8.1",
+    "sass-embedded": "1.83.0",
+    "typescript": "5.7.2",
+    "vite": "5.4.11"
+  }
+}

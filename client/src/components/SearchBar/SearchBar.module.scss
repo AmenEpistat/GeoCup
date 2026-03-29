@@ -1,0 +1,118 @@
+.search {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 380px;
+  z-index: 10;
+
+  @media (max-width: 768px) {
+    bottom: 12px;
+    top: initial;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    transform: none;
+  }
+}
+
+.search__wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(8, 8, 24, 0.92);
+  border-radius: 12px;
+  padding: 0 12px;
+  backdrop-filter: blur(16px);
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+  color: rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+}
+
+.search__input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 14px;
+  padding: 12px 0;
+  letter-spacing: 0.7px;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+  }
+}
+
+.search__clear {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  font-size: 11px;
+  padding: 4px;
+
+  &:hover { color: white; }
+}
+
+.search__spinner {
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-top-color: $primary-color;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.search__dropdown {
+  margin-top: 4px;
+  background: rgba(8, 8, 24, 0.96);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(16px);
+}
+
+.search__suggestion {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.05);
+  padding: 10px 14px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.1s;
+
+  &:last-child { border-bottom: none; }
+  &:hover { background: rgba(255, 255, 255, 0.05); }
+}
+
+.search__pin {
+  width: 14px;
+  height: 14px;
+  color: $primary-color;
+  flex-shrink: 0;
+}
+
+.search__sugg-name {
+  font-size: 13px;
+  color: white;
+  margin-bottom: 2px;
+}
+
+.search__sugg-sub {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.35);
+}
