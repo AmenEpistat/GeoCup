@@ -16,15 +16,15 @@ PHYSICAL_BOUNDS = {
     "height": (2, 462),
     "stairs": (1, 87),
     "avg_floor_height": (2.5, 8),
-    "gkh_floor_count_min": (1, 100),
-    "gkh_floor_count_max": (1, 100),
-    "area_sq_m": (16, 182000),
+    "gkh_floor_count_min": (1, 87),
+    "gkh_floor_count_max": (1, 87),
+    "area_sq_m": (16, 20000),
 }
 
 CITY_CAPS = {
     "spb": {
-        "height": 200,
-        "stairs": 40,
+        "height": 462,
+        "stairs": 87,
     }
 }
 
