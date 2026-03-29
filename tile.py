@@ -2,7 +2,7 @@ import subprocess
 import os
 
 def make_tiles():
-    input_path = "data/processed/your_file.geojson"
+    input_path = "data/processed/frontend.geojson"
     output_dir = "client/public/data"
     output_path = os.path.join(output_dir, "buildings.pmtiles")
 
