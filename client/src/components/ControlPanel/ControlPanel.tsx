@@ -83,8 +83,8 @@ const ControlPanel = observer(() => {
                     <Slider
                         range
                         min={0}
-                        max={200}
-                        step={5}
+                        max={462}
+                        step={2}
                         value={[min, max]}
                         onChange={(value: any) => {
                             mapStore.setHeightRange(value);
@@ -93,7 +93,7 @@ const ControlPanel = observer(() => {
 
                     <div className={styles['control-panel__range-labels']}>
                         <span>0 м</span>
-                        <span>200 м</span>
+                        <span>462 м</span>
                     </div>
                 </div>
 
