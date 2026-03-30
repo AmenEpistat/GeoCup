@@ -9,6 +9,15 @@
   color: white;
   backdrop-filter: blur(16px);
   z-index: 10;
+
+  @media (max-width: 768px) {
+    bottom: 60px;
+    top: initial;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    transform: none;
+  }
 }
 
 .building-tooltip__close {
