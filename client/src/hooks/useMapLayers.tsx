@@ -11,8 +11,7 @@ import {
 } from '../constants/colors.ts';
 import type { Build } from '../types/build.ts';
 
-const DATA_URL = import.meta.env.VITE_PMTILES_URL ?? '/data/buildings.pmtiles';
-const pmTiles = new PMTiles(DATA_URL);
+const pmTiles = new PMTiles('/data/buildings.pmtiles');
 
 function useElevationScale(mode: string) {
     const [scale, setScale] = useState(mode === '3d' ? 1 : 0);
